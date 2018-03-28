@@ -2,8 +2,8 @@ const uuid = require('uuid');
 const AWS = require('aws-sdk');
 const dynObj = new AWS.DynamoDB.DocumentClient();
 const s3 = new AWS.S3();
- const accountSid = 'AC5e7a6ac704712ff9dabe807951a358b8';
- const authToken = '7b13a0a19b4c62a2c8a2c1d633e49d58';
+ const accountSid = ''; // my account_sid
+ const authToken = ''; // my auth_token
 
 
 
@@ -62,8 +62,8 @@ module.exports.upload = (event) => {
 
      client.messages.create({
         
-        to: '+17785227100',
-        from: '+16042275510',
+        to: '', // my own number
+        from: '', // number i bought from twilio
         body: msg
     }).then((message) => console.log(message.sid));
 
